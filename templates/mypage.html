@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>マイページ</h1>
+
+<a>新着メッセージ</a>
+
+<p>情報を提供する</p>
+<p>提供履歴を見る</p>
+<p>ポイント確認</p>
+<p>保有クーポン一覧</p>
+
+<input type="submit" value="トップベージ">
+<from action="/logout" method="post">
+<input type="submit" value="ログアウト">
+</from>
+{% endblock %}

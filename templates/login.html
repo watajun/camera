@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>ログイン</h1>
+<form action="/login" method="post">
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
+<input type="submit" value="ログイン">
+</form>
+
+{% endblock %}
