@@ -39,9 +39,9 @@ def index():
 
 @app.route("/login", methods=["POST"])
 def login_post():
-    name = request.form["name"]
+    email = request.form["email"]
     password = request.form["password"]
-    user = User.get(name=name)
+    user = User.get(email=email)
     if check_password_hash(user.password, password):
         login_user(user)
         return redirect("/mypage")
@@ -73,7 +73,7 @@ def mypage():
     return render_template("mypage.html")
 
 
-@app.route("/logout", methoda=["POST"])
+@app.route("/logout", methods=["POST"])
 def logout():
     logout_user()
     return redirect("/login")
