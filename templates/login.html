@@ -1,12 +1,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="parent">
+    <h1 class="child">ログイン</h1>
+</div>
 
-<h1 class="h1">ログイン</h1>
 <form action="/login" method="post">
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="ログイン">
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">メールアドレス</label>
+        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="aaa@email.com">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">パスワード</label>
+        <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="英数字8文字以上">
+    </div>
+
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <input class="btn btn btn-danger" type="submit" value="ログイン">
+    </div>
+
 </form>
 
 {% endblock %}

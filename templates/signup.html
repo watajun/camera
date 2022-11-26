@@ -2,23 +2,55 @@
 
 {% block content %}
 
-<h1 class="h1">新規登録</h1>
-<form action="/signup" method="post">
 
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<div class="parent">
+    <h1 class="child">新規登録</h1>
 </div>
 
-<input type="" name="" value="name">
-<input type="number" name="age" value="age">
-<input type="radio" name="gender" value="male">男性
-<input type="radio" name="gender" value="female">女性
-<input type="text" name="address" placeholder="住所">
-<input type="tel" name="tel" placeholder="ハイフンなし">
-<input type="email" name="email" placeholder="Email">
-<input type="password" name="password" placeholder="Password">
-<input type="submit" value="新規登録">
+<form action="/signup" method="post">
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">名前</label>
+        <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="平泉　太郎">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">年齢</label>
+        <input type="number" name="age" class="form-control" id="exampleFormControlInput1" placeholder="年齢">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">性別</label>
+        <select class="form-select mb-3" name="gender" aria-label="Default select example">
+            <option selected>選択してください</option>
+            <option value="men">男性</option>
+            <option value="woman">女性</option>
+        </select>
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">住所</label>
+        <input type="text" name="address" class="form-control" id="exampleFormControlInput1" placeholder="住所">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">電話番号</label>
+        <input type="tel" name="tel" class="form-control" id="exampleFormControlInput1" placeholder="ハイフンなし">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">メールアドレス</label>
+        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="aaa@email.com">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">パスワード</label>
+        <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="英数字8文字以上">
+    </div>
+
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <input class="btn btn btn-success" type="submit" value="新規登録">
+    </div>
 </form>
 
 {% endblock %}

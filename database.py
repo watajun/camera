@@ -27,5 +27,19 @@ class User(UserMixin, Model):
         database = db
         table_name = "user"
 
-
 db.create_tables([User])
+
+
+class Offer(Model):
+    id = IntegerField(primary_key=True)
+    date = IntegerField()
+    time = IntegerField()
+    example = CharField()
+    place = CharField()
+    detail = CharField()
+
+    class Meta:
+        database = db
+        table_name = "offer"
+
+db.create_tables([Offer])

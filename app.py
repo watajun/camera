@@ -61,8 +61,23 @@ def signup():
 @app.route("/signup", methods=["POST"])
 def register():
     name = request.form["name"]
+    age = request.form["age"]
+    gender = request.form["gender"]
+    address = request.form["address"]
+    tel = request.form["tel"]
+    email = request.form["email"]
     password = request.form["password"]
-    User.create(name=name, password=generate_password_hash(password, method="sha256"))
+
+    User.create(
+        name=name,
+        age=age,
+        gender=gender,
+        address=address,
+        tel=tel,
+        email=email,
+        password=generate_password_hash(password, method="sha256"),
+    )
+
     return redirect("/login")
 
 
@@ -73,6 +88,11 @@ def mypage():
     return render_template("mypage.html")
 
 
+@app.route("/offer_form", methods=["GET", "POST"])
+def offer():
+    return render_template("offer_form.html")
+
+
 @app.route("/logout", methods=["POST"])
 def logout():
     logout_user()
@@ -80,4 +100,4 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

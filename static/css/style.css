@@ -6,9 +6,18 @@
     padding-top: 100px;
 }
 
-.h1 {
-    border-bottom: solid 3px black;
+.parent {
+	width: 100%;
+    padding-bottom: 50px;
 }
+.child {
+	width: 200px;
+	margin: 0 auto;
+    border-bottom: solid 3px black;
+    text-align: center;
+}
+
+
 
 .page_header {
     background-color: #2d6399;
