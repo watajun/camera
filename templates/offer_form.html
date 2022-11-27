@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="/offer_form" method="post">
+<form action="/offer_form" method="post" enctype="multipart/form-data">
 
     <div class="parent">
         <h1 class="child">情報提供</h1>
@@ -12,14 +12,14 @@
         <label for="exampleFormControlInput1" class="form-label">事例</label>
         <select class="form-select mb-3" name="example" aria-label="Default select example">
             <option selected>選択してください</option>
-            <option value="1">不審者や不審電話の情報</option>
-            <option value="2">熊などの危険性がある動物の目撃情報提供</option>
-            <option value="3">野生動物の死骸駆除依頼</option>
-            <option value="4">道路の破損や陥没箇所の報告</option>
-            <option value="5">カーブミラーの設置依頼</option>
-            <option value="6">公共施設の不具合報告</option>
-            <option value="7">不法投棄や騒音などの環境保全</option>
-            <option value="8">他、お問い合わせ欄</option>
+            <option value="不審者や不審電話の情報">不審者や不審電話の情報</option>
+            <option value="熊などの危険性がある動物の目撃情報提供">熊などの危険性がある動物の目撃情報提供</option>
+            <option value="野生動物の死骸駆除依頼">野生動物の死骸駆除依頼</option>
+            <option value="道路の破損や陥没箇所の報告">道路の破損や陥没箇所の報告</option>
+            <option value="カーブミラーの設置依頼">カーブミラーの設置依頼</option>
+            <option value="公共施設の不具合報告">公共施設の不具合報告</option>
+            <option value="不法投棄や騒音などの環境保全">不法投棄や騒音などの環境保全</option>
+            <option value="他、お問い合わせ欄">他、お問い合わせ欄</option>
         </select>
     </div>
 
@@ -35,12 +35,26 @@
     </div>
 
     <div class="mb-5 col-4 offset-4">
+        <label for="exampleFormControlInput1" class="form-label">写真3枚まで</label>
+        <label class="input-group-text" for="inputGroupFile01">写真1</label>
+        <input type="file" name="photo1" class="form-control" id="inputGroupFile01">
+    </div>
+    <div class="mb-5 col-4 offset-4">
+        <label class="input-group-text" for="inputGroupFile01">写真2</label>
+        <input type="file" name="photo2" class="form-control" id="inputGroupFile01">
+    </div>
+    <div class="mb-5 col-4 offset-4">
+        <label class="input-group-text" for="inputGroupFile01">写真3</label>
+        <input type="file" name="photo3" class="form-control" id="inputGroupFile01">
+    </div>
+
+    <div class="mb-5 col-4 offset-4">
         <label for="exampleFormControlTextarea1" class="form-label">詳細</label>
         <textarea name="detail" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 
     <div class="d-grid gap-2 col-3 mx-auto">
-        <input class="btn btn btn-success" type="submit" value="送信">
+        <input class="btn btn btn-success" type="submit" href="offer_form.html" value="送信">
     </div>
 
     {% endblock %}

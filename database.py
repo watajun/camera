@@ -27,19 +27,27 @@ class User(UserMixin, Model):
         database = db
         table_name = "user"
 
+
 db.create_tables([User])
 
 
 class Offer(Model):
     id = IntegerField(primary_key=True)
+    user_id = IntegerField()
     date = IntegerField()
     time = IntegerField()
     example = CharField()
     place = CharField()
+    photo1 = CharField()
+    photo2 = CharField()
+    photo3 = CharField()
     detail = CharField()
 
     class Meta:
         database = db
         table_name = "offer"
 
+
+# 作り直し
+# db.drop_tables([Offer])
 db.create_tables([Offer])

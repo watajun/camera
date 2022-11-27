@@ -18,6 +18,25 @@
         <a>他、サイト説明欄・・・</a>
         <br>
     </div>
+
+    {% for s in range(size) %}
+    <div class="top_offer">
+        <p>年齢：{{users[s].age}}</p>
+        <p>性別：{{users[s].gender}}</p>
+        <p>事例：{{offers[s].example}}</p>
+        <p>日にち：{{offers[s].date}}</p>
+        <p>時間：{{offers[s].time}}</p>
+        <p>場所：{{offers[s].place}}</p>
+        <!-- <a><img src={{offers[s].photo1}}></a> -->
+        <!-- <a><img src={{offers[s].photo2}}></a> -->
+        <!-- <a><img src={{offers[s].photo3}}></a> -->
+        <p>詳細：{{offers[s].detail}}</p>
+    </div>
+    <p></p>
+    {% endfor %}
+
+
+
 </div>
 
 {% endblock %}

@@ -6,15 +6,19 @@
     <h1 class="child">マイページ</h1>
 </div>
 
-<a>新着メッセージ</a>
+<div class="mypage">
+    <ul>
+        <li><a href="/offer_form">情報を提供する</a></li>
+        <li>提供履歴を見る</li>
+        <li>ポイント確認</li>
+        <li>保有クーポン一覧</li>
+    </ul>
 
-<p>情報を提供する</p>
-<p>提供履歴を見る</p>
-<p>ポイント確認</p>
-<p>保有クーポン一覧</p>
 
-<input type="submit" value="トップベージ">
-<from action="/logout" method="post">
-<input type="submit" value="ログアウト">
-</from>
+    <input type="submit" class="btn btn btn-success" value="トップベージ">
+
+    <from action="/logout" method="post">
+        <input type="submit" class="btn btn-secondary" value="ログアウト">
+    </from>
+</div>
 {% endblock %}

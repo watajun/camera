@@ -7,12 +7,13 @@
 }
 
 .parent {
-	width: 100%;
+    width: 100%;
     padding-bottom: 50px;
 }
+
 .child {
-	width: 200px;
-	margin: 0 auto;
+    width: 200px;
+    margin: 0 auto;
     border-bottom: solid 3px black;
     text-align: center;
 }
@@ -60,7 +61,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
     background-color: #FFF;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     /* width: 100%; */
 }
@@ -82,14 +83,36 @@ body {
 }
 
 
-
 .explanation {
     width: 80%;
     margin: 0 auto;
     max-width: 500px;
 }
 
+.top_offer {
+    border: solid;
+    border-color: rgb(78, 76, 76);
+    border-radius: 8px;
+    margin-top: 50px;
+}
 
+.aaa {
+    border-bottom: solid 3px #333;
+}
+
+.mypage {
+    text-align: center;
+    font-size: 30px;
+}
+
+.mypage ul {
+    list-style: none;
+    padding-bottom: 50px;
+}
+
+.mypage ul li {
+    padding-top: 30px;
+}
 
 /* -------------------- footer -------------------- */
 
